@@ -80,4 +80,4 @@ O operador ternário será essencial em situações que necessitarem uma ou muit
 - Bloco de código: ``` isUser == "Admin" ? {...} : {...} ```.
 - Elemento: ``` isUser == "Admin" ? menuAdmin() : menuUser() ```.
 
-Ele é muito mais simples que as outras duas estruturas de condição, mas também específico em utilização.
+Ele é muito mais simples que as outras duas estruturas de condição, mas também é específica em utilização.
