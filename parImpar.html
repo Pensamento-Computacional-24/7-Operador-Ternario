@@ -5,15 +5,16 @@
     */
 
     // Entrada de dados
-    
-    
+    // numero % 2 == 0 ? par : impar
+    let numero = parseInt( prompt("Digite um número:") ); // 2 + "2" = "22"
 
     // Processamento
-    
+    let mensagem = numero == 0 ? "Neutro" :
+        numero % 2 == 0 ? "Par" : "Ímpar";
     
 
     // Saída de dados
-    
+    document.write(mensagem);
     
 
 </script>
