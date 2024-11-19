@@ -17,8 +17,8 @@
     let mensagem = idade > 0 && idade < 12 ? "Criança"
         : idade >= 12 && idade <= 17 ? "Adolescente"
         : idade >= 18 && idade <= 59 ? "Adulto"
-        : idade >= 60 ? "Idoso" 
-        : idade > 120 ? "Pré Histórico" : "Idade inválida";
+        : idade > 120 ? "Pré Histórico"
+        : idade >= 60 ? "Idoso" : "Idade inválida";
     
 
     // Saída de dados
