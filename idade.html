@@ -3,22 +3,25 @@
     /*
     Verificação de Categoria de Idade: escreva um programa que solicite ao usuário sua idade e classifique-a em uma das categorias.
 
-    - Se a idade for menor que 12, exiba "Criança".
+    - Se a idade for maior que 0 e menor que 12, exiba "Criança".
     - Se a idade estiver entre 12 e 17, exiba "Adolescente".
     - Se a idade for entre 18 e 59, exiba "Adulto".
     - Se a idade for 60 ou mais, exiba "Idoso".
     */
 
     // Entrada de dados
-    
+    let idade = parseInt(prompt("Digite a sua idade:"));
     
 
     // Processamento
-    
+    let mensagem = idade > 0 && idade < 12 ? "Criança"
+        : idade >= 12 && idade <= 17 ? "Adolescente"
+        : idade >= 18 && idade <= 59 ? "Adulto"
+        : idade >= 60 ? "Idoso" : "Idade inválida";
     
 
     // Saída de dados
-    
+    document.write(mensagem);
     
 
 </script>
