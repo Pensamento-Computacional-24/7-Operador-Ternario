@@ -21,11 +21,20 @@
     
 
     // Processamento
+    // Cria variável desconto
+    // Compara, se o valor da compra estiver entre 100 e 200, recebe 10% (10/100) de desconto
     let desconto = valorCompra >= 100 && valorCompra <= 200 ? 10/100 
+    // Se não, se o valor da compra for maior que 200, recebe 20% (20/100) de desconto
+    // Se não for nenhum, nem outro, recebe 0% de desconto
         : valorCompra > 200 ? 20/100 : 0;
 
+    // Soma-se com o desconto
+    // Se tiver cupom, recebe 5% de desconto a mais
+    // Se não, recebe 0% de desconto
     desconto += cupom == "S" ? 0.05 : 0;
     
+    // Cria variável valorFinal
+    // Multiplica valorCompra por 1 - desconto, ex: 1 - 0.25 = 0.75, que multiplica o valorCompra -> 100 * 0.75 = R$ 75.00, 25% de desconto sobre R$ 100.00
     let valorFinal = valorCompra * (1 - desconto);
 
     // Saída de dados
