@@ -4,20 +4,25 @@
     Verificação de Descontos em uma Loja: escreva um programa que peça ao usuário o valor da compra e se possui um cupom de desconto (sim/não). O programa deve calcular o valor final da compra com base nas seguintes regras:
 
     - Se o valor da compra for menor que 100, não há desconto.
+    
     - Se o valor da compra estiver entre 100 e 200, o desconto será de 10%.
     - Se o valor da compra for maior que 200, o desconto será de 20%.
-    - Se o usuário tiver um cupom de desconto, ele recebe um adicional de 5% de desconto, independentemente do valor da compra.
+    
+    - Se o usuário tiver um cupom de desconto, ele recebe um adicional de 5% de desconto, 
+        independentemente do valor da compra.
 
     Por fim, o programa deve exibir em tela: o valor original da compra, o valor do desconto e o valor final da compra.
     Obs.: utilize If Else apenas para adicionar o cupom de desconto.
     */
 
     // Entrada de dados
-    
+    let valorCompra = parseFloat(prompt("Digite o valor da compra:")) ;
+    let cupom = prompt("Possui cupom? S/N").toUpperCase();
     
 
     // Processamento
-    
+    let desconto = valorCompra >= 100 && valorCompra <= 200 ? 10/100 
+        : valorCompra > 200 ? 20/100 : 0;
     
 
     // Saída de dados
