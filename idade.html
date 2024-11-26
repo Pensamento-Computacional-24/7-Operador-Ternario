@@ -10,15 +10,18 @@
     */
 
     // Entrada de dados
-    
+    let idade = parseInt(prompt("Digite a sua idade (em anos):"));
     
 
     // Processamento
-    
+    let mensagem = idade > 0 && idade < 12 ? "Criança" 
+        : idade >= 12 && idade <= 17 ? "Adolescente" 
+        : idade >= 18 && idade <= 59 ? "Adulto"
+        : "Idoso";
     
 
     // Saída de dados
-    
+    document.write(mensagem);
     
 
 </script>
