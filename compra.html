@@ -23,10 +23,13 @@
     // Processamento
     let desconto = valorCompra >= 100 && valorCompra <= 200 ? 10/100 
         : valorCompra > 200 ? 20/100 : 0;
+
+    desconto += cupom == "S" ? 0.05 : 0;
     
+    let valorFinal = valorCompra * (1 - desconto);
 
     // Saída de dados
-    
+    document.write(`O valor da compra recebeu ${desconto*100}% de desconto e passou de R$ ${valorCompra.toFixed(2)} para R$ ${valorFinal.toFixed(2)}.`);
     
 
 </script>
