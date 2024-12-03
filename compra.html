@@ -23,10 +23,13 @@
         : 0;
 
     desconto += cupom == "S" ? 5/100 : 0;
-    
+
+    const valorFinal = valorCompra * (1 - desconto);
+    //Exemplo: 15 * (1 - 5/100) = 15 * 0,95 = R$ 14,25
 
     // Saída de dados
-    document.write(`O valor original da compra é R$ ${valorCompra.toDixed(2)}, o valor do desconto e o valor final da compra`);
+    document.write(`O valor original da compra é R$ ${valorCompra.toFixed(2)}, 
+    o valor do desconto é ${desconto*100}% e o valor final da compra ficou R$ ${valorFinal.toFixed(2)}.`);
     
 
 </script>
