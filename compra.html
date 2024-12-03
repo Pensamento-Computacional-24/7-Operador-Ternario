@@ -6,6 +6,7 @@
     - Se o valor da compra for menor que 100, não há desconto.
     - Se o valor da compra estiver entre 100 e 200, o desconto será de 10%.
     - Se o valor da compra for maior que 200, o desconto será de 20%.
+    
     - Se o usuário tiver um cupom de desconto, ele recebe um adicional de 5% de desconto, independentemente do valor da compra.
 
     Por fim, o programa deve exibir em tela: o valor original da compra, o valor do desconto e o valor final da compra.
@@ -13,15 +14,19 @@
     */
 
     // Entrada de dados
-    
-    
+    let valorCompra = parseFloat(prompt("Digite o valor da Compra:")); // "5.20" -> 5.2
+    let cupom = prompt("Possui cupom: (S/N)").toUpperCase();
 
     // Processamento
-    
+    let desconto = valorCompra >= 100 && valorCompra <= 200 ? 10/100
+        : valorCompra > 200 ? 0.2
+        : 0;
+
+    desconto += cupom == "S" ? 5/100 : 0;
     
 
     // Saída de dados
-    
+    document.write(`O valor original da compra é R$ ${valorCompra.toDixed(2)}, o valor do desconto e o valor final da compra`);
     
 
 </script>
