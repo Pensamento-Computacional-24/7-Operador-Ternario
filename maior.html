@@ -5,15 +5,19 @@
     */
 
     // Entrada de dados
-    
+    let n1 = parseInt(prompt("Primeiro número:"))
+    let n2 = parseInt(prompt("Segundo número:"))
+    let n3 = parseInt(prompt("Terceiro número:"))
     
 
     // Processamento
-    
+    let maior = n1 >= n2 && n1 >= n3 ? 
+    n1 : n2 > n1 && n2 >= n3 ?
+    n2 : n3;
     
 
     // Saída de dados
-    
+    document.write(maior);
     
 
 </script>

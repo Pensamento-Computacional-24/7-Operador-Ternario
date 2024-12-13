@@ -5,15 +5,25 @@
     */
 
     // Entrada de dados
-    
-    
+    let numero1 = parseFloat(prompt("Digite um número:"));
+    let numero2 = parseFloat(prompt("Digite outro número:"));
+    let op = prompt("Escolha a operação: +, -, /, *");
 
     // Processamento
-    
+    let resultado = op == "+" ? numero1 + numero2
+        : op == "-" ? numero1 - numero2
+        : op == "*" ? numero1 * numero2
+        : op == "/" ? 
+            (numero2 == 0 ? "Não é possível dividir por zero!" : numero1 / numero2 )
+        : "Operação inválida!";
+        
     
 
     // Saída de dados
-    
+    document.write(
+        resultado == "Operação inválida!" || resultado == "Não é possível dividir por zero!" ? resultado
+        : `O resultado da expressão ${numero1.toFixed(2)} ${op} ${numero2.toFixed(2)} é ${resultado.toFixed(2)}.`
+    )
     
 
 </script>

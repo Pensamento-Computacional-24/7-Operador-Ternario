@@ -13,15 +13,21 @@
     */
 
     // Entrada de dados
-    
+    let valorCompra = parseFloat(prompt("Digite o valor da compra:"));
+    let cupom = prompt("Possui cupom? (S/N)").toUpperCase();
     
 
     // Processamento
+    let desconto = valorCompra >= 100 && valorCompra <= 200 ? 0.10
+        : valorCompra > 200 ? 0.20
+        : 0;
+
+    desconto += cupom == "S" ? 0.05 : 0;
     
-    
+    let valorFinal = valorCompra * (1 - desconto);
 
     // Saída de dados
-    
+    document.write(`O valor da compra era R$ ${valorCompra.toFixed(2)}, com desconto de ${(desconto*100).toFixed(0)}% passou a valer R$ ${valorFinal.toFixed(2)}.`)
     
 
 </script>
